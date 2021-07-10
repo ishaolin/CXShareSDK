@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) UIImage *image;   // 分享的图片（纯图片分享）
 
-@property (nonatomic, strong) NSArray<NSString *> *recipients; // 短信分享的接收人
+@property (nonatomic, copy) NSArray<NSString *> *recipients; // 短信分享的接收人
 @property (nonatomic, strong) CXShareTrackerData *trackerData; // 埋点数据
 
 /**

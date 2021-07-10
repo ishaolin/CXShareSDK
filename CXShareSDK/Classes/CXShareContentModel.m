@@ -11,19 +11,19 @@
 @implementation CXShareContentModel
 
 - (BOOL)onlyImageShare{
-    if([CXStringUtil isValidString:_content]){
+    if([CXStringUtils isValidString:_content]){
         return NO;
     }
     
-    if([CXStringUtil isValidString:_title]){
+    if([CXStringUtils isValidString:_title]){
         return NO;
     }
     
-    if([CXStringUtil isHTTPURL:_shareURL]){
+    if([CXStringUtils isHTTPURL:_shareURL]){
         return NO;
     }
     
-    if([CXStringUtil isHTTPURL:_videoURL]){
+    if([CXStringUtils isHTTPURL:_videoURL]){
         return NO;
     }
     
@@ -31,23 +31,23 @@
 }
 
 - (BOOL)isValidData{
-    if([CXStringUtil isHTTPURL:_shareURL]){
+    if([CXStringUtils isHTTPURL:_shareURL]){
         return YES;
     }
     
-    if([CXStringUtil isHTTPURL:_imageURL]){
+    if([CXStringUtils isHTTPURL:_imageURL]){
         return YES;
     }
     
-    if([CXStringUtil isHTTPURL:_videoURL]){
+    if([CXStringUtils isHTTPURL:_videoURL]){
         return YES;
     }
     
-    if([CXStringUtil isValidString:_title]){
+    if([CXStringUtils isValidString:_title]){
         return YES;
     }
     
-    if([CXStringUtil isValidString:_content]){
+    if([CXStringUtils isValidString:_content]){
         return YES;
     }
     
@@ -56,19 +56,19 @@
 
 - (NSString *)smsContent{
     NSMutableArray<NSString *> *content = [NSMutableArray array];
-    if([CXStringUtil isValidString:_title]){
+    if([CXStringUtils isValidString:_title]){
         [content addObject:_title];
     }
     
-    if([CXStringUtil isValidString:_content]){
+    if([CXStringUtils isValidString:_content]){
         [content addObject:_content];
     }
     
-    if([CXStringUtil isHTTPURL:_shareURL]){
+    if([CXStringUtils isHTTPURL:_shareURL]){
         [content addObject:_shareURL];
-    }else if([CXStringUtil isHTTPURL:_videoURL]){
+    }else if([CXStringUtils isHTTPURL:_videoURL]){
         [content addObject:_videoURL];
-    }else if([CXStringUtil isHTTPURL:_imageURL]){
+    }else if([CXStringUtils isHTTPURL:_imageURL]){
         [content addObject:_imageURL];
     }
     

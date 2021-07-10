@@ -95,7 +95,7 @@
                                             previewImageData:imageData
                                                        title:content.title
                                                  description:content.content];
-        }else if([CXStringUtil isHTTPURL:content.videoURL]){
+        }else if([CXStringUtils isHTTPURL:content.videoURL]){
             qqShareObject = [QQApiVideoObject objectWithURL:[NSURL URLWithString:content.videoURL]
                                                       title:content.title
                                                 description:content.content
@@ -162,11 +162,11 @@
         message.title = content.title;
         message.description = content.content;
         
-        if([CXStringUtil isHTTPURL:content.shareURL]){
+        if([CXStringUtils isHTTPURL:content.shareURL]){
             WXWebpageObject *webpageObject = [WXWebpageObject object];
             webpageObject.webpageUrl = content.shareURL;
             message.mediaObject = webpageObject;
-        }else if([CXStringUtil isHTTPURL:content.videoURL]){
+        }else if([CXStringUtils isHTTPURL:content.videoURL]){
             WXVideoObject *videoObject = [WXVideoObject object];
             videoObject.videoUrl = content.videoURL;
             videoObject.videoLowBandUrl = content.videoURL;
@@ -292,7 +292,7 @@
             message.imageObject = webpage;
         }
         
-        if([CXStringUtil isHTTPURL:content.videoURL]){
+        if([CXStringUtils isHTTPURL:content.videoURL]){
             WBNewVideoObject *videoObject = [WBNewVideoObject object];
             [videoObject addVideo:[NSURL URLWithString:content.videoURL]];
             message.videoObject = videoObject;
@@ -314,7 +314,7 @@
 }
 
 - (void)downloadShareImage:(CXShareContentModel *)content completion:(CXImageDownloadCompletionBlock)completion{
-    if([CXStringUtil isHTTPURL:content.imageURL]){
+    if([CXStringUtils isHTTPURL:content.imageURL]){
         [CXHUD showHUD:@"正在下载图片...."];
         [CXWebImage downloadImageWithURL:content.imageURL completion:^(UIImage *image, NSData *data) {
             if(!data && image){
