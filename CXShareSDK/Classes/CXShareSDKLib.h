@@ -9,7 +9,7 @@
 #define CXShareSDKLib_h
 
 /* QQ分享相关 */
-#if __has_include(<TencentOpenAPI/TencentOAuth.h>)
+#if __has_include(<TencentOpenAPI/TencentOpenApiUmbrellaHeader.h>)
 #import <TencentOpenAPI/TencentOpenApiUmbrellaHeader.h>
 #define CX_SHARE_AVAILABLE_QQ
 #endif
@@ -27,8 +27,8 @@
 #endif
 
 /* 微信分享相关 */
-#if __has_include("WXApi.h")
-#import "WXApi.h"
+#if __has_include(<WechatOpenSDK/WXApi.h>)
+#import <WechatOpenSDK/WXApi.h>
 #define CX_SHARE_AVAILABLE_WECHAT
 #endif
 
