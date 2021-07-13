@@ -15,6 +15,6 @@
 #import "CXShareSDKManager.h"
 #import "CXSharePanel.h"
 #import "CXShareUtils.h"
-#import "CXShareSDKManager+CXWebViewSupported.h"
+#import "CXShareSDKManager+CXDictionarySupported.h"
 
 #endif /* CXShareSDK_h */

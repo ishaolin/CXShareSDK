@@ -1,15 +1,15 @@
 //
-//  CXShareSDKManager+CXWebViewSupported.m
+//  CXShareSDKManager+CXDictionarySupported.m
 //  Pods
 //
 //  Created by wshaolin on 2019/1/29.
 //
 
-#import "CXShareSDKManager+CXWebViewSupported.h"
+#import "CXShareSDKManager+CXDictionarySupported.h"
 #import <CXFoundation/CXFoundation.h>
 #import "CXShareUtils.h"
 
-@implementation CXShareSDKManager (CXWebViewSupported)
+@implementation CXShareSDKManager (CXDictionarySupported)
 
 - (void)shareWithDictionary:(NSDictionary<NSString *,id> *)dictionary
                    inWindow:(UIWindow *)window
@@ -43,7 +43,7 @@
 
 @end
 
-@implementation CXSharePanelModel (CXWebViewSupported)
+@implementation CXSharePanelModel (CXDictionarySupported)
 
 + (CXSharePanelModel *)modelWithDictionary:(NSDictionary<NSString *, id> *)dictionary{
     CXShareChannel shareChannel = [dictionary cx_stringForKey:@"channel"];
@@ -67,7 +67,7 @@
 
 @end
 
-@implementation CXShareContentModel (CXWebViewSupported)
+@implementation CXShareContentModel (CXDictionarySupported)
 
 + (CXShareContentModel *)modelWithDictionary:(NSDictionary<NSString *, id> *)dictionary{
     if(CXDictionaryIsEmpty(dictionary)){

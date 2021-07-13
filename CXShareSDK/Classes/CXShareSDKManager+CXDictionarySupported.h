@@ -1,5 +1,5 @@
 //
-//  CXShareSDKManager+CXWebViewSupported.h
+//  CXShareSDKManager+CXDictionarySupported.h
 //  Pods
 //
 //  Created by wshaolin on 2019/1/29.
@@ -9,7 +9,7 @@
 #import "CXSharePanelModel.h"
 #import "CXShareContentModel.h"
 
-@interface CXShareSDKManager (CXWebViewSupported)
+@interface CXShareSDKManager (CXDictionarySupported)
 
 - (void)shareWithDictionary:(NSDictionary<NSString *, id> *)dictionary
                    inWindow:(UIWindow *)window
@@ -18,13 +18,13 @@
 
 @end
 
-@interface CXSharePanelModel (CXWebViewSupported)
+@interface CXSharePanelModel (CXDictionarySupported)
 
 + (CXSharePanelModel *)modelWithDictionary:(NSDictionary<NSString *, id> *)dictionary;
 
 @end
 
-@interface CXShareContentModel (CXWebViewSupported)
+@interface CXShareContentModel (CXDictionarySupported)
 
 + (CXShareContentModel *)modelWithDictionary:(NSDictionary<NSString *, id> *)dictionary;
 

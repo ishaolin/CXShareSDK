@@ -1,6 +1,6 @@
 //
 //  CXSharePlatformKey.m
-//  CXShareSDK
+//  Pods
 //
 //  Created by wshaolin on 2021/7/4.
 //
