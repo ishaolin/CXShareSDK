@@ -109,7 +109,7 @@ BOOL CXShareChannelEnabled(CXShareChannel shareChannel){
 
 NSArray<CXShareChannel> *CXEnableShareChannels(void){
     NSMutableArray<CXShareChannel> *shareChannels = [NSMutableArray array];
-    [GLAllShareChannels() enumerateObjectsUsingBlock:^(CXShareChannel  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [CXAllShareChannels() enumerateObjectsUsingBlock:^(CXShareChannel  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if(CXShareChannelEnabled(obj)){
             [shareChannels addObject:obj];
         }

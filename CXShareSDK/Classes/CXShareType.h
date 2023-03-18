@@ -21,7 +21,7 @@ CX_SHARE_EXTERN CXShareChannel const CXShareChannelQQZone;              // QQ空
 CX_SHARE_EXTERN CXShareChannel const CXShareChannelWeibo;               // 新浪微博
 CX_SHARE_EXTERN CXShareChannel const CXShareChannelSMS;                 // 短信
 
-CX_SHARE_EXTERN NSArray<CXShareChannel> *GLAllShareChannels(void);
+CX_SHARE_EXTERN NSArray<CXShareChannel> *CXAllShareChannels(void);
 CX_SHARE_EXTERN BOOL CXShareChannelIsValid(CXShareChannel shareChannel);
 
 CX_SHARE_EXTERN CXSharePlatform const CXSharePlatformWeChat;    // 微信

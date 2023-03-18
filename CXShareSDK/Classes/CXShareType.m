@@ -21,7 +21,7 @@ CXSharePlatform const CXSharePlatformAlipay = @"alipay";
 CXSharePlatform const CXSharePlatformQQ = @"qq";
 CXSharePlatform const CXSharePlatformWeibo = @"weibo";
 
-NSArray<CXShareChannel> *GLAllShareChannels(void){
+NSArray<CXShareChannel> *CXAllShareChannels(void){
     static NSArray<CXShareChannel> *allShareChannels = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -42,5 +42,5 @@ BOOL CXShareChannelIsValid(CXShareChannel shareChannel){
         return NO;
     }
     
-    return [GLAllShareChannels() containsObject:shareChannel];
+    return [CXAllShareChannels() containsObject:shareChannel];
 }
